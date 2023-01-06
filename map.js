@@ -61,6 +61,7 @@ function buttonClick() {
     if (!hasPlace) {
         window.alert("No place has been selected!")
     } else {
-        Telegram.WebApp.sendData(place.address_components[0].short_name + "+" + place.address_components[2].short_name + "+" + place.place_id);
+        let miles = document.getElementById('miles').value;
+        Telegram.WebApp.sendData(place.address_components[0].short_name + "+" + place.address_components[2].short_name + "+" + place.place_id + "+" + miles);
     }
 }

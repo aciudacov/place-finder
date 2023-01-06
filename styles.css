@@ -46,7 +46,7 @@ body {
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 85%;
+    width: 55%;
     border-radius: 5px;
 }
 
@@ -73,8 +73,17 @@ body {
 }
 
 #send {
-    width: 10%;
-    height: 2vh;
+    width: 13%;
+    height: 3vh;
     position: relative;
     top: -5px;
+    font-family: Roboto;
+    font-size: 2vh;
+}
+
+#miles {
+    width: 15%;
+    font-family: Roboto;
+    font-size: 2vh;
+    font-weight: 300;
 }
