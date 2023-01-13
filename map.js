@@ -62,8 +62,8 @@ function buttonClick() {
         window.alert("No place has been selected!")
     } else {
         let miles = document.getElementById('miles').value;
-        let placeName = place.address_components.find(a => a.types.find(t => t == "locatily")).short_name;
-        let placeState = place.address_components.find(a => a.types.find(t => t == "administrative_area_level_1")).short_name;
+        let placeName = place.address_components.find(a => a.types.includes('locality')).short_name;
+        let placeState = place.address_components.find(a => a.types.includes('administrative_area_level_1')).short_name;
         window.alert("DEBUG: " + placeName + ", " + placeState);
         Telegram.WebApp.sendData(place.address_components[0].short_name + "+" + place.address_components[2].short_name + "+" + place.place_id + "+" + miles);
     }
